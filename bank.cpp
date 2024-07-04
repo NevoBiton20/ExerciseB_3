@@ -3,17 +3,37 @@
 
 int Bank::askCard(Player player)
 {
-    if(player.getResources()[2]>0 && player.getResources()[3]>0 && player.getResources()[4]>0)
+    if(player.canBuyItem(Card()))
     {
-        std::random_device rd; 
-        std::mt19937 eng(rd());
-        std::uniform_int_distribution<> distr(1, 100);
-        int random_number = distr(eng);
-        return random_number;
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(0, 4);
+        int card = dis(gen);
+        std::string cardName;
+        switch (card)
+        {
+        case 0:
+            cardName = "Monopol";
+            break;
+        case 1:
+            cardName = "Path Build";
+            break;
+        case 2:
+            cardName = "Year-Of-Plenty";
+            break;
+        case 3:
+            cardName = "Knight";
+            break;
+        case 4:
+            cardName = "Victory Point(+1)";
+            break;
+        }
+        std::cout <<player.getName() << ", You just earned "<<cardName <<" card!"<<std::endl;
+        return card;
     }
     else
     {
-        printf("%s Doesn't meet the required resources to but a card! Required resources: 1 wool, 1 iron, 1 grain",player.getName());
+        std::cout<<"Insufficent funds for buying card: Required resources: 1 grain, 1 wool, 1 iron"<<std::endl;
         return -1;
     }
 }

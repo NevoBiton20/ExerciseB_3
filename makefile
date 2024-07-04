@@ -2,10 +2,19 @@ CXX=clang++-14
 CXXFLAGS=-std=c++2a -Werror -Wsign-conversion
 VALGRIND_FLAGS=-v --leak-check=full --show-leak-kinds=all  --error-exitcode=99
 
-SOURCES=catan.cpp player.cpp bank.cpp board.cpp player.cpp city.cpp path.cpp settlement.cpp TestCounter.cpp Test.cpp
+SOURCES=item.cpp tile.cpp catan.cpp player.cpp bank.cpp board.cpp
 OBJECTS=$(subst .cpp,.o,$(SOURCES))
 
-catan: demo
+catan: main
+	./$^
+
+tests: test
+	./$^
+	
+main: Main.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o main
+
+demoRun: demo
 	./$^
 
 demo: Demo.o $(OBJECTS)
@@ -25,4 +34,4 @@ valgrind: demo test
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
 clean:
-	rm -f *.o demo test
+	rm -f *.o demo test main

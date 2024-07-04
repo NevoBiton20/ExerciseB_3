@@ -1,19 +1,21 @@
 /* A simple Tile class which describes an element of the catan board*/
-
+#ifndef TILE_HPP
+#define TILE_HPP
 #include <string>
 class Tile
 {
     private:
         int num; // resources receving value
-        std::string type; // tile type: Meadow, Mountains, Hills, Agricultural, Forest, Desert
+        std::string type; // tile type: Pasture, Mountains, Hills, Agricultural, Forest, Desert
         
     public:    
         // Tile Constructor
         Tile(int n, std::string s) : num(n), type(s) {}
 
         // Destructor
-        ~Tile() = default; // Default destructor 
+        ~Tile() = default;
 
-        int getValue(); // returns the value of the tile
-        std::string getType(); // returns the type of the tile
+        int getValue() const; // returns the value of the tile
+        std::string getType() const; // returns the type of the tile
 };
+#endif
