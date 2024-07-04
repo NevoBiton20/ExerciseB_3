@@ -1,4 +1,5 @@
-/* This class represents the catan full Board which contains all the possible tiles to get resources from */
+/*nevobiton0@gmail.com
+This class represents the catan full Board which contains all the possible tiles to get resources from */
 #ifndef BOARD_HPP
 #define BOARD_HPP
 #include "tile.hpp"
