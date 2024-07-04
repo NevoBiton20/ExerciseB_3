@@ -2,7 +2,8 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
-/*  This class represent a player, here you can find all the resources and cards a player has, all the assets, and current amount of points in the round 
+/*nevobiton0@gmail.com
+This class represent a player, here you can find all the resources and cards a player has, all the assets, and current amount of points in the round 
     The resources array format is : [ 'Brick' , 'Lumber' , 'Wool' , 'Grain' , 'Iron' ]
     The cards array format is  [ 'Monopol' , 'Path Build' , 'Year of plenty' , 'Knight' , 'Victory Point' ] */
 
