@@ -3,12 +3,22 @@
 
 int Bank::askCard(Player player)
 {
+    if(cards[0]==0 && cards[1]==0 && cards[2]==0 && cards[3] ==0 && cards[4]==0)
+    {
+        std::cout <<"The Bank doesn't have amy cards left"<<std::endl;
+        return -1;
+    }
+    int card;
     if(player.canBuyItem(Card()))
     {
-        std::random_device rd;
-        std::mt19937 gen(rd());
-        std::uniform_int_distribution<> dis(0, 4);
-        int card = dis(gen);
+        do
+        {
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<> dis(0, 4);
+            card = dis(gen);
+        } while (cards[card]==0);
+        
         std::string cardName;
         switch (card)
         {
@@ -29,6 +39,7 @@ int Bank::askCard(Player player)
             break;
         }
         std::cout <<player.getName() << ", You just earned "<<cardName <<" card!"<<std::endl;
+        cards[card]--;
         return card;
     }
     else
