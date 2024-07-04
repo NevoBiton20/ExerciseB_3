@@ -772,6 +772,8 @@ void Catan::useCard(int player, int card)
                 if(players[i].getResources()[x]>0)
                 {
                     message += getColor(i) + players[i].getName() + RESET + " Gave 1 resource to " +getColor(player) + players[player].getName() + RESET + "\n";
+                    players[i].loseResource(x,1);
+                    players[player].addResource(x,1);
                 }
 
             }
