@@ -1,4 +1,6 @@
-/* A simple Tile class which describes an element of the catan board*/
+/* nevobiton0@gmail.com
+A simple Tile class which describes an element of the catan board
+*/
 #ifndef TILE_HPP
 #define TILE_HPP
 #include <string>
