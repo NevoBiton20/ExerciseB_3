@@ -1,4 +1,5 @@
-/*  This is an abstarct class that represent an item that can be placed on the game board, such as: Setllement, City, Path.
+/*nevobiton0@gmail.com
+This is an abstarct class that represent an item that can be placed on the game board, such as: Setllement, City, Path.
     The price array contains how many of each resource is required to buy this item.
     The price format is: [ 'Brick' , 'Lumber' , 'Wool' , 'Grain' , 'Iron' ]
     This item belongs to the player appears in the player field: [-1(empty) - white , 0 - red , 1 - green , 2 - blue ]
