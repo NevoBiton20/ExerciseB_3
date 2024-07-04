@@ -1,4 +1,5 @@
-/* This is the bank class which used to make all the operations that the bank needs to do such as:
+/*nevobiton0@gmail.com
+This is the bank class which used to make all the operations that the bank needs to do such as:
     Random card purchase or bank resources ask */
 #ifndef BANK_HPP
 #define BANK_HPP
