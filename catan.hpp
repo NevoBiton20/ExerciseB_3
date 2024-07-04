@@ -1,4 +1,5 @@
-/* This class is the game facade, it means that all the actual logic of the game
+/*nevobiton0@gmail.com
+This class is the game facade, it means that all the actual logic of the game
    happens here and this class connects all the other class components together */
 #ifndef CATAN_HPP
 #define CATAN_HPP
